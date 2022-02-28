@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="fragment"
+            type="com.example.presentation.view.MainFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,14 +28,15 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:onClick="@{fragment::startBtnClick}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:background="@drawable/main_start_btn_frame"
             android:padding="10dp"
-            android:textSize="17sp"
-            android:layout_marginTop="20dp"
             android:text="궁합 보러가기기"
             android:textColor="@color/main_color"
+            android:textSize="17sp"
             app:layout_constraintStart_toStartOf="@+id/textview"
             app:layout_constraintTop_toBottomOf="@id/textview" />
 
@@ -42,6 +45,7 @@
             android:layout_height="200dp"
             android:src="@drawable/ic_love"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/textview"
             app:layout_constraintTop_toTopOf="@+id/textview" />
 

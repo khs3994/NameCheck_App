@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="fragment"
+            type="com.example.presentation.view.WomanNameFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,6 +42,7 @@
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:onClick="@{fragment::nextBtnClick}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/name_setting_btn_frame"
