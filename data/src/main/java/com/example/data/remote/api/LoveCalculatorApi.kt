@@ -11,7 +11,7 @@ interface LoveCalculatorApi {
     suspend fun getPercentage(
         @Header("x-rapidapi-key") key : String,
         @Header("x-rapidapi-host") host : String,
-        @Query("sname") sName : String,
-        @Query("fname") fName : String
+        @Query("fname") fName : String,
+        @Query("sname") sName : String
     ) : Response<DataLoveResponse>
 }
