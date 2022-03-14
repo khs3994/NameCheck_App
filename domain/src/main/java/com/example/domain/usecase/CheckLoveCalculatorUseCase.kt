@@ -1,4 +1,4 @@
-package com.example.data.usecase
+package com.example.domain.usecase
 
 import com.example.domain.repository.MainRepository
 import com.example.domain.utiils.RemoteErrorEmitter
