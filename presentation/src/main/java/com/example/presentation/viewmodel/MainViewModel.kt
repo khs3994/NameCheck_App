@@ -33,7 +33,6 @@ class MainViewModel @Inject constructor(
                 apiCallResult = response
                 _apiCallEvent.postValue(ScreenState.LOADING)
             }
-
             else _apiCallEvent.postValue(ScreenState.ERROR)
         }
     }

@@ -36,7 +36,9 @@ class ResultFragment : BaseFragment<FragmentResultBinding>(R.layout.fragment_res
         }
     }
 
-    private fun setLoveMsgTxt(msg: String) = binding.message.setText(msg)
+    private fun setLoveMsgTxt(msg: String) {
+        binding.message.text = msg
+    }
 
     fun backMainBtnClick(view: View) {
         this.findNavController().navigate(R.id.action_resultFragment_to_mainFragment)

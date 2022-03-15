@@ -31,7 +31,6 @@ class ManNaneFragment : BaseFragment<FragmentManNaneBinding>(R.layout.fragment_m
             binding.nameEditTxt.text.toString(),
             mainViewModel.womanNameResult
         )
-        this.findNavController().navigate(R.id.action_manNaneFragment_to_resultFragment)
     }
 
     private fun observeViewModel() {
