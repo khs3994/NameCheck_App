@@ -1,0 +1,13 @@
+package com.example.presentation.widjet.extention
+
+import android.app.Activity
+import android.app.AppComponentFactory
+import android.content.Context
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+
+//intent and finish
+fun AppCompatActivity.startActivityAndFinish(context: Context, activity: Class<*>) {
+    startActivity(Intent(context,activity).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+    this.finish()
+}

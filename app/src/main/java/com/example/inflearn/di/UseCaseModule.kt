@@ -1,6 +1,8 @@
 package com.example.inflearn.di
 
 import com.example.domain.repository.MainRepository
+import com.example.domain.repository.SplashRepository
+import com.example.domain.usecase.CheckAppVersionUseCase
 import com.example.domain.usecase.CheckLoveCalculatorUseCase
 import dagger.Module
 import dagger.Provides
@@ -15,4 +17,8 @@ class UseCaseModule {
     @Provides
     @Singleton
     fun provideCheckLoveCalculatorUseCase(repository: MainRepository) = CheckLoveCalculatorUseCase(repository)
+
+    @Provides
+    @Singleton
+    fun provideCheckAppVerSionUseCase(repository: SplashRepository) = CheckAppVersionUseCase(repository)
 }
