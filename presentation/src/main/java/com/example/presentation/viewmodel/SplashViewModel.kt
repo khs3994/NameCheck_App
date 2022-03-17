@@ -9,5 +9,5 @@ import javax.inject.Inject
 class SplashViewModel @Inject constructor(
     private val checkAppVersionUseCase: CheckAppVersionUseCase
 ) : ViewModel() {
-    fun checkAppVersion() = checkAppVersionUseCase.excute()
+    fun checkAppVersion() = checkAppVersionUseCase.execute()
 }

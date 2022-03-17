@@ -7,7 +7,7 @@ import javax.inject.Inject
 class CheckLoveCalculatorUseCase @Inject constructor(
     private val mainRepository: MainRepository
 ) {
-    suspend fun excute(remoteErrorEmitter: RemoteErrorEmitter,
+    suspend fun execute(remoteErrorEmitter: RemoteErrorEmitter,
                        host : String,
                        key : String,
                        mName : String,

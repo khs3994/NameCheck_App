@@ -6,5 +6,5 @@ import javax.inject.Inject
 class CheckAppVersionUseCase @Inject constructor(
     private val splashRepository: SplashRepository
 ) {
-    fun excute() = splashRepository.checkAppVersion()
+    fun execute() = splashRepository.checkAppVersion()
 }

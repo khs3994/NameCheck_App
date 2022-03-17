@@ -2,6 +2,8 @@ package com.example.domain.repository
 
 import com.example.domain.model.DomainLoveResponse
 import com.example.domain.utiils.RemoteErrorEmitter
+import com.google.android.gms.tasks.Task
+import com.google.firebase.database.DataSnapshot
 
 interface MainRepository {
     suspend fun checkLoveCalculator(
@@ -13,4 +15,10 @@ interface MainRepository {
         //sName : 여자이름
         wName : String
     ) : DomainLoveResponse?
+
+    //통계 가져오기
+    fun getStatistics() : Task<DataSnapshot>
+
+    //통계 저장하기
+    fun setStatistics(plusValue: Int) : Task<Void>
 }
