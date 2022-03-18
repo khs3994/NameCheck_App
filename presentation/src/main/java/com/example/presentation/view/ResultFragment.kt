@@ -11,6 +11,8 @@ import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
 import com.example.presentation.databinding.FragmentResultBinding
 import com.example.presentation.viewmodel.MainViewModel
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ResultFragment : BaseFragment<FragmentResultBinding>(R.layout.fragment_result) {
     private val mainViewModel by activityViewModels<MainViewModel>()
@@ -19,6 +21,7 @@ class ResultFragment : BaseFragment<FragmentResultBinding>(R.layout.fragment_res
     override fun init() {
         binding.fragment = this
         initResult()
+        saveScore()
     }
 
     private fun initResult() {
@@ -36,6 +39,15 @@ class ResultFragment : BaseFragment<FragmentResultBinding>(R.layout.fragment_res
             else -> setLoveMsgTxt("알수없는 힘?!")
         }
     }
+
+    private fun saveScore() = with(mainViewModel.apiCallResult) {
+        mainViewModel.setScore(this.fname, this.sname, this.percentage, nowTime())
+    }
+
+    private fun nowTime(): String =
+        SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분", Locale("ko", "KR")).format(
+            Date(System.currentTimeMillis())
+        )
 
     private fun saveStatistics() {
         mainViewModel.getStatistics()
