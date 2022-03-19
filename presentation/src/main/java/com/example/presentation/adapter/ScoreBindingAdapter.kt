@@ -16,4 +16,10 @@ object ScoreBindingAdapter {
     fun setWoman(text : TextView, name : String){
         text.text = name
     }
+
+    @JvmStatic
+    @BindingAdapter("set_percentage")
+    fun setWoman(text : TextView, content : Int){
+        text.text = content.toString()
+    }
 }
