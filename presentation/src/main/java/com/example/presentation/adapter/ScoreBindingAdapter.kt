@@ -19,7 +19,7 @@ object ScoreBindingAdapter {
 
     @JvmStatic
     @BindingAdapter("set_percentage")
-    fun setWoman(text : TextView, content : Int){
+    fun setPercentage(text : TextView, content : Int){
         text.text = content.toString()
     }
 }
