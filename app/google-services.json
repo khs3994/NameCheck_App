@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "797363953658",
+    "firebase_url": "https://inflearncheckapp-default-rtdb.firebaseio.com",
+    "project_id": "inflearncheckapp",
+    "storage_bucket": "inflearncheckapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797363953658:android:8172ab51629cac29a98e43",
+        "android_client_info": {
+          "package_name": "com.example.inflearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797363953658-n6g079gemff8f7ns1mufh77q85sukteo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFH_MTw1R_4fPbrBEywjV1p9HaUjY_Lj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797363953658-n6g079gemff8f7ns1mufh77q85sukteo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

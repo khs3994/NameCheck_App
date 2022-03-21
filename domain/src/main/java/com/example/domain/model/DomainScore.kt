@@ -9,4 +9,6 @@ data class DomainScore(
     val percentage : Int,
     //시간
     val date  : String
-)
+){
+    constructor() : this("오류","오류",0,"오류")
+}

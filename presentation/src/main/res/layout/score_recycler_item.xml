@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="data"
+            type="com.example.domain.model.DomainScore" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,6 +34,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                set_man="@{data.man}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
@@ -61,6 +64,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                set_percentage="@{data.percentage}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
@@ -89,6 +93,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                set_woman="@{data.woman}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
