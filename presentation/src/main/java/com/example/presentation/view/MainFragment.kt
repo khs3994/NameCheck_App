@@ -13,6 +13,7 @@ import com.example.presentation.base.BaseFragment
 import com.example.presentation.databinding.FragmentMainBinding
 import com.example.presentation.viewmodel.MainViewModel
 import com.example.presentation.widjet.extention.showVertical
+import com.pss.library.CountNumberEvent.Companion.countNumber
 
 class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     private val mainViewModel by activityViewModels<MainViewModel>()
@@ -29,7 +30,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
 
     private fun observeViewModel(){
         mainViewModel.getStatisticsEvent.observe(this){
-            binding.startistics.text = it.toString()
+            countNumber(0,it,binding.startistics,2000)
         }
 
         mainViewModel.getScoreEvent.observe(this){
